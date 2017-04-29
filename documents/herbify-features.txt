@@ -1,0 +1,36 @@
+Description: Product locator for specific weed products. Marketed proposition 215 patients.
+
+Feature List:
+   -  Local Favorites
+   -  Categories
+      -	 concentrates
+      -	 edibles
+      -	 flower
+   -  List View
+   -  Map View
+
+To Do:
+   []  Build Launchscreen
+      [] Insert Herbify logo
+
+   []  Build skeletons for
+      [] home view
+      [] categories view
+      [] brand view
+      [] product view
+
+--------------------------------------------
+   [] Brand selection
+   [] Internal Array with product locations
+   [] Product selection
+   [] Get product list to display
+   [] Get product map location (map view)
+   [] Switch between list and map view
+
+Views:
+   -  Home Page View
+   -  Categories Page View (concentrates, edibles flower)
+   -  Brand Page View
+   -  Product Page View
+      -	 Map
+      -	 List
