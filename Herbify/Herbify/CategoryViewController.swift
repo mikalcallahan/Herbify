@@ -9,9 +9,13 @@
 import UIKit
 
 class CategoryViewController: UIViewController {
+    
+    @IBOutlet weak var categoryLabel: UILabel!
+    var categoryName = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        categoryLabel.text = categoryName
 
         // Do any additional setup after loading the view.
     }
@@ -21,7 +25,6 @@ class CategoryViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 

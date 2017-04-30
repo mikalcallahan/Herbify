@@ -67,10 +67,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XsV-r0-hSx">
-                                <rect key="frame" x="120" y="56" width="135" height="43"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XsV-r0-hSx">
+                                <rect key="frame" x="53" y="77" width="268" height="43"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="135" id="b0Y-nZ-Ivp"/>
+                                    <constraint firstAttribute="width" constant="268" id="b0Y-nZ-Ivp"/>
                                     <constraint firstAttribute="height" constant="43" id="zL1-fg-RUg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
@@ -81,13 +81,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="XsV-r0-hSx" firstAttribute="centerX" secondItem="aT3-ae-9db" secondAttribute="centerX" constant="-0.5" id="6Bt-eQ-eAM"/>
-                            <constraint firstItem="XsV-r0-hSx" firstAttribute="top" secondItem="rxa-q0-rIm" secondAttribute="bottom" constant="36" id="MTM-WO-nQc"/>
+                            <constraint firstItem="XsV-r0-hSx" firstAttribute="top" secondItem="rxa-q0-rIm" secondAttribute="bottom" constant="57" id="MTM-WO-nQc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="categoryLabel" destination="XsV-r0-hSx" id="BT8-OS-TQ3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gr2-PB-6ML" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="917.60000000000002" y="114.69265367316342"/>
+            <point key="canvasLocation" x="916" y="121"/>
         </scene>
     </scenes>
     <resources>

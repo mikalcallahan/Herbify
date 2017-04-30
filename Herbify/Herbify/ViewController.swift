@@ -26,6 +26,10 @@ class ViewController: UIViewController {
             return
         }
         
+        if category != "null"{
+            categoryVC.categoryName = category
+        }
+        
         categoryVC.modalTransitionStyle = .coverVertical
         present(categoryVC,animated:true, completion:nil)
     }
