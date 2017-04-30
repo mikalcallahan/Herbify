@@ -17,6 +17,7 @@
 		95A88FC41EB2787300367396 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 95A88FC31EB2787300367396 /* logo.png */; };
 		95A88FC61EB2787800367396 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95A88FC51EB2787800367396 /* logo@2x.png */; };
 		95A88FC81EB2787C00367396 /* logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95A88FC71EB2787C00367396 /* logo@3x.png */; };
+		95F3800F1EB5727400E87025 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F3800E1EB5727400E87025 /* CategoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		95A88FC31EB2787300367396 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = Assets.xcassets/logo.png; sourceTree = "<group>"; };
 		95A88FC51EB2787800367396 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo@2x.png"; path = "Assets.xcassets/logo@2x.png"; sourceTree = "<group>"; };
 		95A88FC71EB2787C00367396 /* logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo@3x.png"; path = "Assets.xcassets/logo@3x.png"; sourceTree = "<group>"; };
+		95F3800E1EB5727400E87025 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryViewController.swift; path = Herbify/CategoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		957379101EB265E4001F924C = {
 			isa = PBXGroup;
 			children = (
+				95F3800E1EB5727400E87025 /* CategoryViewController.swift */,
 				9573791B1EB265E4001F924C /* Herbify */,
 				957379301EB265E4001F924C /* HerbifyTests */,
 				9573793B1EB265E4001F924C /* HerbifyUITests */,
@@ -283,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9573791F1EB265E4001F924C /* ViewController.swift in Sources */,
+				95F3800F1EB5727400E87025 /* CategoryViewController.swift in Sources */,
 				9573791D1EB265E4001F924C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,5 +19,21 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func openCategory(category: String) {
+        guard let categoryVC = storyboard?.instantiateViewController(withIdentifier: "categoryViewController") as? CategoryViewController else {
+            print("CategoryViewController could not be instantiated from storyboard")
+            return
+        }
+        
+        categoryVC.modalTransitionStyle = .coverVertical
+        present(categoryVC,animated:true, completion:nil)
+    }
+    
+    @IBAction func concentrateButton(_ sender: Any) {
+        let category = "Concentrates"
+        openCategory(category: category)
+    }
+    
 }
 
