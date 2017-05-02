@@ -60,7 +60,7 @@
         <!--Brand View Controller-->
         <scene sceneID="YO5-p7-5z9">
             <objects>
-                <viewController id="4T9-X9-r7I" customClass="BrandViewController" customModule="Herbify" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="brandViewController" id="4T9-X9-r7I" customClass="BrandViewController" customModule="Herbify" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UJu-aF-f62"/>
                         <viewControllerLayoutGuide type="bottom" id="APE-BO-N6q"/>
@@ -79,18 +79,49 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brand" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tC-gp-whg">
+                                <rect key="frame" x="53" y="144" width="268" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="Hyp-uP-Qgb"/>
+                                    <constraint firstAttribute="width" constant="268" id="ia0-xr-pHB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jgu-pq-8A1">
+                                <rect key="frame" x="53" y="294" width="90" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="bBs-tt-nof"/>
+                                    <constraint firstAttribute="height" constant="30" id="d7J-qs-ByT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Product"/>
+                                <connections>
+                                    <action selector="productButton:" destination="4T9-X9-r7I" eventType="touchUpInside" id="aHY-Mu-ZJw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1tC-gp-whg" firstAttribute="centerX" secondItem="w6c-Hu-BYj" secondAttribute="centerX" id="Hec-NM-qIe"/>
+                            <constraint firstItem="1tC-gp-whg" firstAttribute="top" secondItem="UJu-aF-f62" secondAttribute="bottom" constant="124" id="Kx7-mI-KIm"/>
+                            <constraint firstItem="Jgu-pq-8A1" firstAttribute="leading" secondItem="w6c-Hu-BYj" secondAttribute="leadingMargin" constant="37" id="gpd-rg-BL5"/>
+                            <constraint firstItem="Jgu-pq-8A1" firstAttribute="top" secondItem="UJu-aF-f62" secondAttribute="bottom" constant="274" id="hag-wH-TWC"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="brandLabel" destination="1tC-gp-whg" id="QHP-ga-KzW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y0H-zB-loL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="80" y="919"/>
+            <point key="canvasLocation" x="79.200000000000003" y="918.89055472263874"/>
         </scene>
         <!--Product View Controller-->
         <scene sceneID="vbT-HL-Hft">
             <objects>
-                <viewController id="gkl-jA-MOr" customClass="ProductViewController" customModule="Herbify" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="productViewController" id="gkl-jA-MOr" customClass="ProductViewController" customModule="Herbify" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BLt-zr-VhA"/>
                         <viewControllerLayoutGuide type="bottom" id="Kk7-zY-Cql"/>
@@ -151,11 +182,24 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WX5-xr-hRA">
+                                <rect key="frame" x="62" y="210" width="40" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="UeG-dQ-LBm"/>
+                                    <constraint firstAttribute="height" constant="30" id="cbW-zv-Sp0"/>
+                                </constraints>
+                                <state key="normal" title="brand"/>
+                                <connections>
+                                    <action selector="brandButton:" destination="fNf-DM-hyQ" eventType="touchUpInside" id="PYS-8G-srD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="XsV-r0-hSx" firstAttribute="top" secondItem="rxa-q0-rIm" secondAttribute="bottom" constant="57" id="036-nJ-3zl"/>
                             <constraint firstItem="XsV-r0-hSx" firstAttribute="centerX" secondItem="aT3-ae-9db" secondAttribute="centerX" constant="-0.5" id="6Bt-eQ-eAM"/>
+                            <constraint firstItem="WX5-xr-hRA" firstAttribute="leading" secondItem="aT3-ae-9db" secondAttribute="leadingMargin" constant="46" id="HBP-Om-x4T"/>
+                            <constraint firstItem="WX5-xr-hRA" firstAttribute="top" secondItem="rxa-q0-rIm" secondAttribute="bottom" constant="190" id="tmM-uS-kek"/>
                         </constraints>
                     </view>
                     <connections>
