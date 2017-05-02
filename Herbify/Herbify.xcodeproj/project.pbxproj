@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9521B7011EB806FC0091CCB5 /* BrandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521B7001EB806FC0091CCB5 /* BrandViewController.swift */; };
+		9521B7031EB80C070091CCB5 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521B7021EB80C070091CCB5 /* ProductViewController.swift */; };
 		9573791D1EB265E4001F924C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9573791C1EB265E4001F924C /* AppDelegate.swift */; };
 		9573791F1EB265E4001F924C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9573791E1EB265E4001F924C /* ViewController.swift */; };
 		957379221EB265E4001F924C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 957379201EB265E4001F924C /* Main.storyboard */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9521B7001EB806FC0091CCB5 /* BrandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BrandViewController.swift; path = Herbify/BrandViewController.swift; sourceTree = "<group>"; };
+		9521B7021EB80C070091CCB5 /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductViewController.swift; path = Herbify/ProductViewController.swift; sourceTree = "<group>"; };
 		957379191EB265E4001F924C /* Herbify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Herbify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9573791C1EB265E4001F924C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9573791E1EB265E4001F924C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 		957379101EB265E4001F924C = {
 			isa = PBXGroup;
 			children = (
+				9521B7001EB806FC0091CCB5 /* BrandViewController.swift */,
+				9521B7021EB80C070091CCB5 /* ProductViewController.swift */,
 				95F3800E1EB5727400E87025 /* CategoryViewController.swift */,
 				9573791B1EB265E4001F924C /* Herbify */,
 				957379301EB265E4001F924C /* HerbifyTests */,
@@ -287,6 +293,8 @@
 			files = (
 				9573791F1EB265E4001F924C /* ViewController.swift in Sources */,
 				95F3800F1EB5727400E87025 /* CategoryViewController.swift in Sources */,
+				9521B7011EB806FC0091CCB5 /* BrandViewController.swift in Sources */,
+				9521B7031EB80C070091CCB5 /* ProductViewController.swift in Sources */,
 				9573791D1EB265E4001F924C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

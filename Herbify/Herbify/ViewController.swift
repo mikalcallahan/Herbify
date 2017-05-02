@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var nav: UINavigationBar!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,9 +23,10 @@ class ViewController: UIViewController {
     }
     
     func openCategory(category: String) {
-        guard let categoryVC = storyboard?.instantiateViewController(withIdentifier: "categoryViewController") as? CategoryViewController else {
-            print("CategoryViewController could not be instantiated from storyboard")
-            return
+        guard let categoryVC = storyboard?.instantiateViewController(withIdentifier: "categoryViewController") as? CategoryViewController
+            else {
+                print("CategoryViewController could not be instantiated from storyboard")
+                return
         }
         
         if category != "null"{
@@ -31,7 +34,7 @@ class ViewController: UIViewController {
         }
         
         categoryVC.modalTransitionStyle = .coverVertical
-        present(categoryVC,animated:true, completion:nil)
+        show(categoryVC, sender:true)
     }
     
     @IBAction func concentrateButton(_ sender: Any) {

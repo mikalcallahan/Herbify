@@ -1,20 +1,17 @@
 //
-//  CategoryViewController.swift
+//  ProductViewController.swift
 //  Herbify
 //
-//  Created by Mikal Callahan on 4/29/17.
+//  Created by Mikal Callahan on 5/1/17.
 //  Copyright © 2017 Mikal Callahan. All rights reserved.
 //
 
 import UIKit
 
-class CategoryViewController: UIViewController {
-    
-    @IBOutlet weak var categoryLabel: UILabel!
-    
+class ProductViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        categoryLabel.text = categoryName
 
         // Do any additional setup after loading the view.
     }
@@ -23,14 +20,8 @@ class CategoryViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-        
-    var categoryName = ""
     
-    @IBAction func backButton(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    
+
     /*
     // MARK: - Navigation
 
