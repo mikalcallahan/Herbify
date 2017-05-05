@@ -30,17 +30,33 @@ class ViewController: UIViewController {
                 return
         }
 
-    switch (segue.identifier!) {
-        case "concentrates":
-            categoryVC.categoryName = "Concentrates"
-        case "edibles":
-            categoryVC.categoryName = "Edibles"
-        case "flower":
-            categoryVC.categoryName = "Flower"
-        default:
-            break
+        switch (segue.identifier!) {
+            case "concentrates":
+                //categoryVC.categoryName = "Concentrates"
+                openConcentrates(categoryVC: categoryVC)
+            case "edibles":
+                //categoryVC.categoryName = "Edibles"
+                openEdibles(categoryVC: categoryVC)
+            case "flower":
+                //categoryVC.categoryName = "Flower"
+                openFlower(categoryVC: categoryVC)
+            default:
+                break
         }
     }
+    
+    func openConcentrates(categoryVC: CategoryViewController){
+        categoryVC.categoryName = "Concentrates"
+    }
+    
+    func openEdibles(categoryVC: CategoryViewController){
+        categoryVC.categoryName = "Edibles"
+    }
+    
+    func openFlower(categoryVC: CategoryViewController){
+        categoryVC.categoryName = "Flower"
+    }
+}
             /*
         let navVC = segue.destination as? UINavigationController
             print("rawr")
@@ -61,9 +77,10 @@ class ViewController: UIViewController {
         tableVC.yourTableViewArray = localArrayValue
     }
     */
+     /*
     func openCategory(category: String) {
         print(category)
-        /*
+       
         guard let categoryVC = storyboard?.instantiateViewController(withIdentifier: "categoryViewController") as? CategoryViewController
             else {
             print("CategoryViewController could not be instantiated from storyboard")
@@ -77,7 +94,6 @@ class ViewController: UIViewController {
         */
         //categoryVC.modalTransitionStyle = .coverVertical
         //show(categoryVC, sender:true)
-    }
     /*
     @IBAction func concentrates(_ sender: Any) {
         print("HOME")
@@ -91,6 +107,7 @@ class ViewController: UIViewController {
         let category = "Concentrates"
         openCategory(category: category)
     }
+ }
  */
     
-}
+
