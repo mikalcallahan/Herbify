@@ -9,6 +9,7 @@
 import UIKit
 
 class BrandViewController: UIViewController {
+    
     @IBOutlet weak var brandLabel: UILabel!
     var brandName = ""
 
@@ -25,6 +26,26 @@ class BrandViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let brandVC = segue.destination as? BrandViewController
+            else {
+                print("BrandViewController could not be instantiated from storyboard")
+                return
+        }
+        
+        switch (segue.identifier!) {
+        case "kurvana":
+            brandVC.brandName = "Kurvana"
+        case "edibles":
+            brandVC.brandName = "Edibles"
+        case "flower":
+            brandVC.brandName = "Flower"
+        default:
+            break
+        }
+    }
+
+    /*
     func openProduct(product: String){
         guard let productVC = storyboard?.instantiateViewController(withIdentifier: "productViewController") as? ProductViewController
         else{
@@ -50,7 +71,7 @@ class BrandViewController: UIViewController {
         let product = "product a"
         openProduct(product: product)
     }
-
+*/
     /*
     // MARK: - Navigation
 

@@ -24,13 +24,21 @@ class ViewController: UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "concentrates"{
-            guard let detailVC = segue.destination as? CategoryViewController
+        guard let categoryVC = segue.destination as? CategoryViewController
             else {
                 print("CategoryViewController could not be instantiated from storyboard")
                 return
-            }
-            detailVC.categoryName = "Concentrates"
+        }
+
+    switch (segue.identifier!) {
+        case "concentrates":
+            categoryVC.categoryName = "Concentrates"
+        case "edibles":
+            categoryVC.categoryName = "Edibles"
+        case "flower":
+            categoryVC.categoryName = "Flower"
+        default:
+            break
         }
     }
             /*
