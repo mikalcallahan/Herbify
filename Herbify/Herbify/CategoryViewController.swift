@@ -12,12 +12,11 @@ class CategoryViewController: UIViewController {
     
     @IBOutlet weak var categoryLabel: UILabel!
     
-    var categoryName = ""
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        categoryLabel.text = categoryName
-
+       // if categoryName != ""{
+            categoryLabel.text = categoryName
+       // }
         // Do any additional setup after loading the view.
     }
 
@@ -25,12 +24,14 @@ class CategoryViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-        
     
+    var categoryName = "whoa"
     
+    /*
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    */
     
     func openBrand(brand: String){
         guard let brandVC = storyboard?.instantiateViewController(withIdentifier: "brandViewController") as? BrandViewController
@@ -43,11 +44,12 @@ class CategoryViewController: UIViewController {
             brandVC.brandName = brand
         }
         
-        brandVC.modalTransitionStyle = .coverVertical
-        show(brandVC, sender:true)
+        //brandVC.modalTransitionStyle = .coverVertical
+        //show(brandVC, sender:true)
     }
     
     @IBAction func brandButton(_ sender: Any) {
+        //print("TEST CAT")
         let brand = "brand a"
         openBrand(brand: brand)
     }

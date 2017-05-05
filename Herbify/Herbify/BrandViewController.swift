@@ -33,14 +33,20 @@ class BrandViewController: UIViewController {
         }
         
         if product != "null"{
-            print("test")
+            print(product)
+            productVC.productName = product
+            //print("test")
+        }
+        else{
+            print("TesT")
         }
         
-        productVC.modalTransitionStyle = .coverVertical
-        show(productVC, sender:true)
+        //productVC.modalTransitionStyle = .coverVertical
+        //show(productVC, sender:true)
     }
     
     @IBAction func productButton(_ sender: Any) {
+        print("PRINT BRAND")
         let product = "product a"
         openProduct(product: product)
     }

@@ -1,23 +1,21 @@
 //
-//  ProductViewController.swift
+//  HomeNavigationController.swift
 //  Herbify
 //
-//  Created by Mikal Callahan on 5/1/17.
+//  Created by Mikal Callahan on 5/2/17.
 //  Copyright © 2017 Mikal Callahan. All rights reserved.
 //
 
 import UIKit
 
-class ProductViewController: UIViewController {
-    
-    @IBOutlet weak var productLabel: UILabel!
-    
-    var productName = ""
+class HomeNavigationController: UINavigationController {
+    @IBOutlet weak var navBar: UINavigationBar!
 
     override func viewDidLoad() {
+    
         super.viewDidLoad()
-        productLabel.text = productName
-        
+        //print("TESTING")
+       // navBar.title = "Herbify"
         // Do any additional setup after loading the view.
     }
 
@@ -26,6 +24,15 @@ class ProductViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    /*  Segue prep */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("YOOO00")
+        if segue.identifier == "concentrates" {
+           // let category = "Concentrates"
+          //  openCategory(category: category)
+        }
+    }
 
     /*
     // MARK: - Navigation
@@ -36,5 +43,5 @@ class ProductViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
