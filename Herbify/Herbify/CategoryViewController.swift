@@ -6,7 +6,6 @@
 //  Copyright © 2017 Mikal Callahan. All rights reserved.
 //  Manual segue from view controller to view controller
 //  http://stackoverflow.com/questions/41886592/segue-and-button-programmatically-swift/41887007#41887007
-cc
 //  http://stackoverflow.com/questions/9674685/creating-a-segue-programmatically
 //
 
