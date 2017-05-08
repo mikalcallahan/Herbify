@@ -89,10 +89,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brand" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tC-gp-whg">
-                                <rect key="frame" x="53" y="188" width="268" height="43"/>
+                                <rect key="frame" x="-1" y="188" width="375" height="43"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="Hyp-uP-Qgb"/>
-                                    <constraint firstAttribute="width" constant="268" id="ia0-xr-pHB"/>
+                                    <constraint firstAttribute="height" constant="43" id="qI8-I6-nMQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
@@ -106,18 +105,15 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Sour"/>
-                                <connections>
-                                    <action selector="productButton:" destination="4T9-X9-r7I" eventType="touchUpInside" id="aHY-Mu-ZJw"/>
-                                    <segue destination="gkl-jA-MOr" kind="show" id="R9r-Rw-9HG"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="1tC-gp-whg" firstAttribute="centerX" secondItem="w6c-Hu-BYj" secondAttribute="centerX" id="Hec-NM-qIe"/>
-                            <constraint firstItem="1tC-gp-whg" firstAttribute="top" secondItem="UJu-aF-f62" secondAttribute="bottom" constant="124" id="Kx7-mI-KIm"/>
+                            <constraint firstItem="1tC-gp-whg" firstAttribute="leading" secondItem="w6c-Hu-BYj" secondAttribute="leadingMargin" constant="-17" id="QDt-fR-bYj"/>
                             <constraint firstItem="Jgu-pq-8A1" firstAttribute="leading" secondItem="w6c-Hu-BYj" secondAttribute="leadingMargin" constant="37" id="gpd-rg-BL5"/>
                             <constraint firstItem="Jgu-pq-8A1" firstAttribute="top" secondItem="UJu-aF-f62" secondAttribute="bottom" constant="274" id="hag-wH-TWC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1tC-gp-whg" secondAttribute="trailing" constant="-15" id="kmx-eQ-Adl"/>
+                            <constraint firstItem="1tC-gp-whg" firstAttribute="top" secondItem="UJu-aF-f62" secondAttribute="bottom" constant="124" id="kv2-QS-vR2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Herbify" id="qJ7-cr-wCw"/>
@@ -142,13 +138,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWe-VK-TZQ">
-                                <rect key="frame" x="53" y="118" width="268" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="43" id="1FK-zv-6e6"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="268" id="LUa-0d-xTL"/>
-                                    <constraint firstAttribute="height" constant="43" id="ahy-lZ-JGK"/>
-                                    <constraint firstAttribute="width" constant="268" id="kgB-OF-Woc"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="112" width="375" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -156,9 +146,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="KWe-VK-TZQ" firstAttribute="top" secondItem="BLt-zr-VhA" secondAttribute="bottom" constant="54" id="1VU-Gl-7ad"/>
-                            <constraint firstItem="KWe-VK-TZQ" firstAttribute="leading" secondItem="2gB-sN-O5Y" secondAttribute="leadingMargin" constant="37" id="TAc-ca-Xow"/>
-                            <constraint firstItem="KWe-VK-TZQ" firstAttribute="centerX" secondItem="2gB-sN-O5Y" secondAttribute="centerX" id="l62-31-aXc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KWe-VK-TZQ" secondAttribute="trailing" constant="-16" id="5GU-8s-qTo"/>
+                            <constraint firstItem="Kk7-zY-Cql" firstAttribute="top" secondItem="KWe-VK-TZQ" secondAttribute="bottom" constant="512" id="8jK-WP-dZ6"/>
+                            <constraint firstItem="KWe-VK-TZQ" firstAttribute="top" secondItem="BLt-zr-VhA" secondAttribute="bottom" constant="92" id="Uzm-ek-6ky"/>
+                            <constraint firstItem="KWe-VK-TZQ" firstAttribute="leading" secondItem="2gB-sN-O5Y" secondAttribute="leadingMargin" constant="-16" id="pNY-qh-eDv"/>
+                            <constraint firstItem="KWe-VK-TZQ" firstAttribute="centerX" secondItem="2gB-sN-O5Y" secondAttribute="centerX" id="vb5-sn-Ckv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Herbify" id="puo-gm-pKS"/>
@@ -183,38 +175,65 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XsV-r0-hSx">
-                                <rect key="frame" x="53" y="121" width="268" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="268" id="b0Y-nZ-Ivp"/>
-                                    <constraint firstAttribute="height" constant="43" id="zL1-fg-RUg"/>
-                                </constraints>
+                                <rect key="frame" x="-1" y="121" width="375" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WX5-xr-hRA">
-                                <rect key="frame" x="42" y="254" width="60" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GuI-cB-2Xa">
+                                <rect key="frame" x="53" y="256" width="102" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="UeG-dQ-LBm"/>
-                                    <constraint firstAttribute="height" constant="30" id="cbW-zv-Sp0"/>
+                                    <constraint firstAttribute="height" constant="30" id="fkC-jg-vvf"/>
+                                    <constraint firstAttribute="width" constant="102" id="rnc-hw-jUx"/>
                                 </constraints>
-                                <state key="normal" title="button 1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Button 1"/>
                                 <connections>
-                                    <action selector="brandButton:" destination="fNf-DM-hyQ" eventType="touchUpInside" id="PYS-8G-srD"/>
-                                    <segue destination="4T9-X9-r7I" kind="show" identifier="kurvana" id="ER3-D7-f5P"/>
+                                    <segue destination="4T9-X9-r7I" kind="show" identifier="kurvana" id="wPb-Pk-eaV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Qo-n6-45S">
+                                <rect key="frame" x="53" y="318" width="102" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="739-U6-HiC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Button 2"/>
+                                <connections>
+                                    <segue destination="4T9-X9-r7I" kind="show" identifier="spliffin" id="h1z-Fx-ajx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59f-vE-hL3">
+                                <rect key="frame" x="53" y="375" width="102" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Button 3"/>
+                                <connections>
+                                    <segue destination="4T9-X9-r7I" kind="show" identifier="qOverQ" id="BBR-G1-lpo"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="XsV-r0-hSx" firstAttribute="top" secondItem="rxa-q0-rIm" secondAttribute="bottom" constant="57" id="036-nJ-3zl"/>
-                            <constraint firstItem="XsV-r0-hSx" firstAttribute="centerX" secondItem="aT3-ae-9db" secondAttribute="centerX" constant="-0.5" id="6Bt-eQ-eAM"/>
-                            <constraint firstItem="WX5-xr-hRA" firstAttribute="leading" secondItem="aT3-ae-9db" secondAttribute="leadingMargin" constant="26" id="HBP-Om-x4T"/>
-                            <constraint firstItem="WX5-xr-hRA" firstAttribute="top" secondItem="rxa-q0-rIm" secondAttribute="bottom" constant="190" id="tmM-uS-kek"/>
+                            <constraint firstItem="GuI-cB-2Xa" firstAttribute="top" secondItem="XsV-r0-hSx" secondAttribute="bottom" constant="92" id="3hK-Uq-oKd"/>
+                            <constraint firstItem="1Qo-n6-45S" firstAttribute="top" secondItem="GuI-cB-2Xa" secondAttribute="bottom" constant="32" id="4VZ-N0-C5V"/>
+                            <constraint firstItem="GuI-cB-2Xa" firstAttribute="leading" secondItem="1Qo-n6-45S" secondAttribute="leading" id="8BP-6t-nXx"/>
+                            <constraint firstItem="GuI-cB-2Xa" firstAttribute="leading" secondItem="aT3-ae-9db" secondAttribute="leadingMargin" constant="37" id="HO2-pq-MFo"/>
+                            <constraint firstItem="1Qo-n6-45S" firstAttribute="trailing" secondItem="59f-vE-hL3" secondAttribute="trailing" id="III-Kz-4Y8"/>
+                            <constraint firstItem="XsV-r0-hSx" firstAttribute="leading" secondItem="aT3-ae-9db" secondAttribute="leadingMargin" constant="-17" id="PNi-Dt-uFR"/>
+                            <constraint firstItem="1Qo-n6-45S" firstAttribute="centerY" secondItem="aT3-ae-9db" secondAttribute="centerY" id="TQa-ee-hfQ"/>
+                            <constraint firstItem="59f-vE-hL3" firstAttribute="top" secondItem="1Qo-n6-45S" secondAttribute="bottom" constant="27" id="ZlL-ki-Hxy"/>
+                            <constraint firstItem="1Qo-n6-45S" firstAttribute="leading" secondItem="59f-vE-hL3" secondAttribute="leading" id="b2H-Js-m8E"/>
+                            <constraint firstItem="GuI-cB-2Xa" firstAttribute="trailing" secondItem="1Qo-n6-45S" secondAttribute="trailing" id="elW-Zu-9Cd"/>
+                            <constraint firstItem="XsV-r0-hSx" firstAttribute="top" secondItem="rxa-q0-rIm" secondAttribute="bottom" constant="57" id="k44-RB-J4J"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XsV-r0-hSx" secondAttribute="trailing" constant="-15" id="kBS-m9-xaJ"/>
+                            <constraint firstItem="Dor-d7-byw" firstAttribute="top" secondItem="59f-vE-hL3" secondAttribute="bottom" constant="262" id="vl3-vm-pP9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Herbify" id="wlC-lu-hFU"/>
                     <connections>
+                        <outlet property="button1Object" destination="GuI-cB-2Xa" id="o5Z-r3-zlK"/>
+                        <outlet property="button2Object" destination="1Qo-n6-45S" id="udA-B6-SWu"/>
+                        <outlet property="button3Object" destination="59f-vE-hL3" id="smd-dt-6gV"/>
                         <outlet property="categoryLabel" destination="XsV-r0-hSx" id="BT8-OS-TQ3"/>
                     </connections>
                 </viewController>
@@ -243,5 +262,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="BF9-ze-8VA"/>
+        <segue reference="BBR-G1-lpo"/>
     </inferredMetricsTieBreakers>
 </document>

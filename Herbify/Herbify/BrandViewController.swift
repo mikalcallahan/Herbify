@@ -44,6 +44,20 @@ class BrandViewController: UIViewController {
             break
         }
     }
+    
+    func openConcentrates(brandVC: CategoryViewController){
+        brandVC.categoryName = "Concentrates"
+    }
+    
+    func openEdibles(brandVC: CategoryViewController){
+        brandVC.categoryName = "Edibles"
+    }
+    
+    func openFlower(brandVC: CategoryViewController){
+        brandVC.categoryName = "Flower"
+    }
+    
+}
 
     /*
     func openProduct(product: String){
@@ -81,5 +95,3 @@ class BrandViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
-}
