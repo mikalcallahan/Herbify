@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    
+    private var category: String!
+    
     //@IBOutlet weak var nav: UINavigationBar!
 
     override func viewDidLoad() {
@@ -22,6 +25,21 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func flowerButton(_ sender: Any) {
+        category = "flower"
+        self.performSegue(withIdentifier: "homeToCategory", sender: self)
+    }
+    
+    
+    @IBAction func concentratesButton(_ sender: Any) {
+        category = "concentrates"
+        self.performSegue(withIdentifier: "homeToCategory", sender: self)
+    }
+    
+    @IBAction func ediblesButton(_ sender: Any) {
+        category = "edibles"
+        self.performSegue(withIdentifier: "homeToCategory", sender: self)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let categoryVC = segue.destination as? CategoryViewController
@@ -30,7 +48,7 @@ class ViewController: UIViewController {
                 return
         }
 
-        switch (segue.identifier!) {
+        switch (category) {
             case "concentrates":
                 //categoryVC.categoryName = "Concentrates"
                 openConcentrates(categoryVC: categoryVC)

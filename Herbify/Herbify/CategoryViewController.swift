@@ -7,6 +7,7 @@
 //  Manual segue from view controller to view controller
 //  http://stackoverflow.com/questions/41886592/segue-and-button-programmatically-swift/41887007#41887007
 //  http://stackoverflow.com/questions/9674685/creating-a-segue-programmatically
+//  
 //
 
 import UIKit
@@ -19,6 +20,7 @@ class CategoryViewController: UIViewController {
     @IBOutlet weak var button3Object: UIButton!
     
     var categoryName: String!
+    private var brand: String!
     
     
     override func viewDidLoad() {
@@ -42,17 +44,28 @@ class CategoryViewController: UIViewController {
                 print("BrandViewController could not be instantiated from storyboard")
                 return
         }
-    
+        switch (brand){
+        case "kurvana":
+            brandVC.brandName = "Kurvana"
+        case "spliffin":
+            brandVC.brandName = "Spliffin"
+        case "jetty":
+            brandVC.brandName = "Jetty Extracts"
+        default:
+            break
+        }
+    /*
         switch (segue.identifier!) {
         case "kurvana":
             brandVC.brandName = "Kurvana"
         case "spliffin":
             brandVC.brandName = "Spliffin"
-        case "qOverQ":
-            brandVC.brandName = "Quality Over Quality"
+        case "jetty":
+            brandVC.brandName = "Jetty Extracts"
         default:
             break
         }
+    */
     }
     
     func changeLabel(){
@@ -75,30 +88,49 @@ class CategoryViewController: UIViewController {
     func concentrates(){
         button1Object.setTitle("Kurvana", for: .normal)
         button2Object.setTitle("Spliffin", for: .normal)
-        button3Object.setTitle("Quality Over Quantity", for: .normal)
+        button3Object.setTitle("Jetty Extracts", for: .normal)
     }
     
     func edibles(){
-        
+        button1Object.setTitle("Sensi Chew", for: .normal)
+        button2Object.setTitle("Cheeba Chew", for: .normal)
+        button3Object.removeFromSuperview()
     }
     
     func flower(){
-        
+        button1Object.setTitle("Presidential RX", for: .normal)
+        button2Object.removeFromSuperview()
+        button3Object.removeFromSuperview()
+    }
+   
+    @IBAction func button1(_ sender: Any) {
+        //brand = button1Object.titleLabel.text =
+        self.performSegue(withIdentifier: "categoryToBrand", sender: self)
     }
     
-    func openConcentrates(brandVC: BrandViewController){
-        brandVC.brandName = "Concentrates"
+    @IBAction func button2(_ sender: Any) {
+        self.performSegue(withIdentifier: "categoryToBrand", sender: self)
     }
     
-    func openEdibles(brandVC: BrandViewController){
-        brandVC.brandName = "Edibles"
-    }
-    
-    func openFlower(brandVC: BrandViewController){
-        brandVC.brandName = "Flower"
+    @IBAction func button3(_ sender: Any) {
+        self.performSegue(withIdentifier: "categoryToBrand", sender: self)
     }
 
 }
+
+/*
+ func openConcentrates(brandVC: BrandViewController){
+ brandVC.brandName = "Concentrates"
+ }
+ 
+ func openEdibles(brandVC: BrandViewController){
+ brandVC.brandName = "Edibles"
+ }
+ 
+ func openFlower(brandVC: BrandViewController){
+ brandVC.brandName = "Flower"
+ }
+ */
     /*
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)

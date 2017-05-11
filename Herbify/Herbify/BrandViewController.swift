@@ -13,6 +13,10 @@ class BrandViewController: UIViewController {
     @IBOutlet weak var brandLabel: UILabel!
     var brandName = ""
 
+    @IBAction func brandA(_ sender: Any) {
+        self.performSegue(withIdentifier: "brandToProduct", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         brandLabel.text = brandName
@@ -25,6 +29,8 @@ class BrandViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let brandVC = segue.destination as? BrandViewController
