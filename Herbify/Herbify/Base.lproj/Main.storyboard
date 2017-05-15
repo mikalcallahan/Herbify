@@ -149,19 +149,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r1J-tt-yfl">
-                                <rect key="frame" x="0.0" y="-0.5" width="375" height="667"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r1J-tt-yfl">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" restorationIdentifier="locationsTable" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fjJ-Qu-gft">
-                                        <rect key="frame" x="0.0" y="163" width="375" height="440"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brand" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tC-gp-whg">
+                                        <rect key="frame" x="0.0" y="50" width="375" height="43"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="440" id="u8c-GP-bJD"/>
+                                            <constraint firstAttribute="height" constant="43" id="53u-ht-8Hx"/>
                                         </constraints>
-                                        <sections/>
-                                    </tableView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Brand" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tC-gp-whg">
-                                        <rect key="frame" x="0.0" y="44" width="375" height="43"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -169,24 +164,33 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="1tC-gp-whg" secondAttribute="trailing" id="cCA-Kh-cJi"/>
+                                    <constraint firstAttribute="bottom" secondItem="1tC-gp-whg" secondAttribute="bottom" constant="510" id="kbh-Lo-7ZQ"/>
                                     <constraint firstItem="1tC-gp-whg" firstAttribute="width" secondItem="r1J-tt-yfl" secondAttribute="width" id="llI-gz-wIL"/>
+                                    <constraint firstItem="1tC-gp-whg" firstAttribute="top" secondItem="r1J-tt-yfl" secondAttribute="top" constant="50" id="rGh-2P-iob"/>
                                     <constraint firstItem="1tC-gp-whg" firstAttribute="centerX" secondItem="r1J-tt-yfl" secondAttribute="centerX" id="wY5-hf-7AM"/>
                                 </constraints>
                             </scrollView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Irl-Nf-Cld">
+                                <rect key="frame" x="0.0" y="200" width="375" height="467"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Irl-Nf-Cld" firstAttribute="bottom" secondItem="APE-BO-N6q" secondAttribute="top" id="8oY-th-k19"/>
                             <constraint firstItem="r1J-tt-yfl" firstAttribute="centerX" secondItem="w6c-Hu-BYj" secondAttribute="centerX" id="9io-Qa-7sm"/>
+                            <constraint firstItem="Irl-Nf-Cld" firstAttribute="leading" secondItem="r1J-tt-yfl" secondAttribute="leading" id="L98-So-ofi"/>
                             <constraint firstItem="r1J-tt-yfl" firstAttribute="width" secondItem="w6c-Hu-BYj" secondAttribute="width" id="Pit-wS-FqK"/>
                             <constraint firstItem="r1J-tt-yfl" firstAttribute="height" secondItem="w6c-Hu-BYj" secondAttribute="height" id="hIQ-HG-HiI"/>
+                            <constraint firstItem="Irl-Nf-Cld" firstAttribute="trailing" secondItem="r1J-tt-yfl" secondAttribute="trailing" id="ruH-Lg-4rd"/>
+                            <constraint firstItem="Irl-Nf-Cld" firstAttribute="top" secondItem="UJu-aF-f62" secondAttribute="bottom" constant="136" id="xhw-ZP-fCc"/>
                             <constraint firstItem="r1J-tt-yfl" firstAttribute="centerY" secondItem="w6c-Hu-BYj" secondAttribute="centerY" id="zUH-td-PPZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Herbify" id="qJ7-cr-wCw"/>
                     <connections>
                         <outlet property="brandLabel" destination="1tC-gp-whg" id="QHP-ga-KzW"/>
-                        <outlet property="locationsTable" destination="fjJ-Qu-gft" id="KoT-7h-Uv0"/>
-                        <outlet property="scrollView" destination="r1J-tt-yfl" id="gFl-uo-ptY"/>
+                        <outlet property="locationsTable" destination="Irl-Nf-Cld" id="Veg-nn-PlU"/>
                         <segue destination="gkl-jA-MOr" kind="show" identifier="brandToProduct" id="8LL-BD-axv"/>
                     </connections>
                 </viewController>

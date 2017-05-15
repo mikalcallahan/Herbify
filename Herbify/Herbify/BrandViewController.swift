@@ -1,3 +1,4 @@
+
 //
 //  BrandViewController.swift
 //  Herbify
@@ -8,7 +9,7 @@
 
 import UIKit
 
-class BrandViewController: UIViewController{
+class BrandViewController: UIViewController, UITableViewDataSource{
     //, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var brandLabel: UILabel!
@@ -37,11 +38,12 @@ class BrandViewController: UIViewController{
         else{
             brandLabel.text = "Unknown"
         }
-        /*
+        
         locationsTable.dataSource = self
+        /*
         locationsTable.delegate = self
         */
-        getLocations()
+        //getLocations()
         //createLabels()
         // Do any additional setup after loading the view.
 
@@ -51,6 +53,109 @@ class BrandViewController: UIViewController{
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return getTableRows()
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = getDispensaryName(indexPath: indexPath)
+        //cell = getDispensaryAddress(indexPath: indexPath)
+        //var cell = UITableViewCell()
+        //cell = getTableData()
+        //cell.textLabel?.text = "Dicks"
+        //cell.textLabel?.text = presidential[indexPath.row]
+        return cell
+    }
+    
+    func getTableRows() -> Int {
+        switch(brandName){
+        case "Presidential RX":
+            return presidential.count
+        case "Kurvana":
+            return kurvana.count
+        case "Spliffin":
+            return spliffin.count
+        case "Sensi Chew":
+            return sensichew.count
+        case "Cheeba Chew":
+            return cheebachew.count
+        case "Jetty Extracts":
+            return jetty.count
+        default:
+            return 0
+        }
+    }
+    
+    func getDispensaryName(indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        //let dispensaryName: String!
+        switch(brandName){
+        case "Presidential RX":
+            cell.textLabel?.text = presidential[indexPath.row]
+            //print(cell.textLabel?.text! ?? print("Could not get name"))
+            //cell.detailTextLabel?.text = dispensaries[dispensaryName]
+        case "Kurvana":
+            cell.textLabel?.text = kurvana[indexPath.row]
+        case "Spliffin":
+            cell.textLabel?.text = spliffin[indexPath.row]
+        case "Sensi Chew":
+            cell.textLabel?.text = sensichew[indexPath.row]
+        case "Cheeba Chew":
+            cell.textLabel?.text = cheebachew[indexPath.row]
+        case "Jetty Extracts":
+            cell.textLabel?.text = jetty[indexPath.row]
+        default:
+            break
+        }
+        //cell.textLabel?.text = presidential[indexPath.row]
+        return cell
+    }
+    
+    func getDispensaryAddress(indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        
+        switch(brandName){
+        case "Presidential RX":
+            cell.textLabel?.text = dispensaries[brandName]
+            //print(cell.textLabel?.text! ?? print("Could not get name"))
+        //cell.detailTextLabel?.text = dispensaries[dispensaryName]
+        case "Kurvana":
+           // cell.textLabel?.text = kurvana[indexPath.row]
+            break
+        case "Spliffin":
+            break
+            //cell.textLabel?.text = spliffin[indexPath.row]
+        case "Sensi Chew":
+            break
+            //cell.textLabel?.text = sensichew[indexPath.row]
+        case "Cheeba Chew":
+            break
+           // cell.textLabel?.text = cheebachew[indexPath.row]
+        case "Jetty Extracts":
+            break
+           // cell.textLabel?.text = jetty[indexPath.row]
+        default:
+            break
+        }
+        
+        return cell
+    }
+
+    func getBrand() -> String {
+        if let brand = brandName{
+            return brand
+        }
+        else{
+            return "Unknown Brand"
+        }
+    }
+    
+}
     /*
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath:indexPath) as MyCell
@@ -87,6 +192,7 @@ class BrandViewController: UIViewController{
         return 50
     }
     */
+    /*
     func getLocations(){
         //let name = brandName.lowercased()
         if brandName == "Presidential RX"{
@@ -98,7 +204,9 @@ class BrandViewController: UIViewController{
             }
         }
     }
+ */
     // TODO: Working on adding cell on click
+    /*
     func addCell(dispensaryName: String, dispensary: String){
         count += 1
         var cell = locationsTable.dequeueReusableCell(withIdentifier: "CELL")
@@ -118,7 +226,8 @@ class BrandViewController: UIViewController{
         print(cell!)
         //return cell
     }
-    
+ */
+    /*
     func createLabels(){
         //let brand = getBrand()
     // CGRectMake has been deprecated - and should be let, not var
@@ -141,17 +250,7 @@ class BrandViewController: UIViewController{
     
     locationsTable.addSubview(label)
     }
-    
-    func getBrand() -> String{
-        if let brand = brandName{
-            return brand
-        }
-        else{
-            return "Unknown Brand"
-        }
-    }
-    
-}
+    */
 
 /*
  
