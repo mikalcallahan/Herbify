@@ -18,6 +18,9 @@ class CategoryViewController: UIViewController {
     @IBOutlet weak var button1Object: UIButton!
     @IBOutlet weak var button2Object: UIButton!
     @IBOutlet weak var button3Object: UIButton!
+    @IBOutlet weak var button1Image: UIImageView!
+    @IBOutlet weak var button2Image: UIImageView!
+    @IBOutlet weak var button3Image: UIImageView!
     
     var categoryName: String!
     private var brand: String!
@@ -35,8 +38,6 @@ class CategoryViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    // TODO: Currently breaks when selecting a brand (it's not programatic, it's storyboard)
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let brandVC = segue.destination as? BrandViewController
@@ -45,16 +46,24 @@ class CategoryViewController: UIViewController {
                 return
         }
         switch (brand){
-        case "kurvana":
+        case "Kurvana":
             brandVC.brandName = "Kurvana"
-        case "spliffin":
+        case "Spliffin":
             brandVC.brandName = "Spliffin"
-        case "jetty":
+        case "Jetty Extracts":
             brandVC.brandName = "Jetty Extracts"
+        case "Presidential RX":
+            brandVC.brandName = "Presidential RX"
+        case "Sensi Chew":
+            brandVC.brandName = "Sensi Chew"
+        case "Cheeba Chew":
+            brandVC.brandName = "Cheeba Chew"
         default:
             break
         }
+    }
     /*
+         
         switch (segue.identifier!) {
         case "kurvana":
             brandVC.brandName = "Kurvana"
@@ -66,7 +75,6 @@ class CategoryViewController: UIViewController {
             break
         }
     */
-    }
     
     func changeLabel(){
         categoryLabel.text = categoryName
@@ -87,32 +95,47 @@ class CategoryViewController: UIViewController {
     
     func concentrates(){
         button1Object.setTitle("Kurvana", for: .normal)
+        button1Image.image = #imageLiteral(resourceName: "kurvanalogo.png")
         button2Object.setTitle("Spliffin", for: .normal)
+        button2Image.image = #imageLiteral(resourceName: "spliffin.png")
         button3Object.setTitle("Jetty Extracts", for: .normal)
     }
     
     func edibles(){
         button1Object.setTitle("Sensi Chew", for: .normal)
+        button1Image.image = #imageLiteral(resourceName: "sensichewlogobw.png")
         button2Object.setTitle("Cheeba Chew", for: .normal)
+        button2Image.image = #imageLiteral(resourceName: "cheebachewlogo.png")
         button3Object.removeFromSuperview()
     }
     
     func flower(){
         button1Object.setTitle("Presidential RX", for: .normal)
+        button1Image.image = #imageLiteral(resourceName: "presidentiallogobw.png")
         button2Object.removeFromSuperview()
         button3Object.removeFromSuperview()
     }
-   
+    
     @IBAction func button1(_ sender: Any) {
-        //brand = button1Object.titleLabel.text =
+        //brand = button1Object.titleLabel?.text
+        
+        if let buttonName = button1Object.titleLabel?.text{
+            brand = buttonName
+        }
         self.performSegue(withIdentifier: "categoryToBrand", sender: self)
     }
     
     @IBAction func button2(_ sender: Any) {
+        if let buttonName = button2Object.titleLabel?.text{
+            brand = buttonName
+        }
         self.performSegue(withIdentifier: "categoryToBrand", sender: self)
     }
     
     @IBAction func button3(_ sender: Any) {
+        if let buttonName = button3Object.titleLabel?.text{
+            brand = buttonName
+        }
         self.performSegue(withIdentifier: "categoryToBrand", sender: self)
     }
 
