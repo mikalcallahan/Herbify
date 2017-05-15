@@ -21,12 +21,17 @@ class BrandViewController: UIViewController, UITableViewDataSource{
     var count: Int = 0
 
     
-    var dispensaries = ["Dank Remedies":"888-949-DANK", "Meds Are Us":"2534 South Santa Fe Ave suite C Vista, CA 92083", "Salty Dog Organics":"2050 East Vista Way Vista, CA 92084", "Golden State CBD":"1275 S Santa Fe Ave Suite #101 Vista, CA 92083", "BloomingScales":"732 E Vista Way Suite #A Vista, California 92804", "Tree House Collective":"1526 S. Santa Fe Unit B Vista, CA 92084", "Vista Wellness Center":"760-933-8285", "The laughing Leaf":"1020 E. Vista Way Vista, CA 92084", "Delta 9":"760-421-1419", "Tri City Emerald":"1945 W. Vista Way Oceanside, CA 92083", "Breaking Buds":"1450 W Mission Road San Marcos, CA 92069", "Organic Solutions":"760-207-5742", "SoCal City Lites":"760-575-2639"]
+    //var dispensaries = ["Dank Remedies":"888-949-DANK", "Meds Are Us":"2534 South Santa Fe Ave suite C Vista, CA 92083", "Salty Dog Organics":"2050 East Vista Way Vista, CA 92084", "Golden State CBD":"1275 S Santa Fe Ave Suite #101 Vista, CA 92083", "BloomingScales":"732 E Vista Way Suite #A Vista, California 92804", "Tree House Collective":"1526 S. Santa Fe Unit B Vista, CA 92084", "Vista Wellness Center":"760-933-8285", "The laughing Leaf":"1020 E. Vista Way Vista, CA 92084", "Delta 9":"760-421-1419", "Tri City Emerald":"1945 W. Vista Way Oceanside, CA 92083", "Breaking Buds":"1450 W Mission Road San Marcos, CA 92069", "Organic Solutions":"760-207-5742", "SoCal City Lites":"760-575-2639"]
     
-    var presidential = ["Dank Remedies","Meds Are Us","Salty Dog Organics"]
+    // 760-586-8508
+
+    
+    var dispensaries = ["Dank Remedies":"888-949-DANK", "Meds Are Us":"760-586-8508", "PUF":"760-909-9805", "Golden State CBD":"760-613-7807", "BloomingScales":"760-201-9951", "Tree House Collective":"760-631-6900", "Vista Wellness Center":"760-933-8285", "The Laughing Leaf":"760-509-4757", "Delta 9":"760-421-1419", "Tri City Emerald":"442-204-5311", "Breaking Buds":"760-871-3375", "Organic Solutions":"760-207-5742", "SoCal City Lites":"760-575-2639"]
+    
+    var presidential = ["Dank Remedies","Meds Are Us","PUF"]
     var kurvana = ["Golden State CBD", "BloomingScales", "Tree House Collective", "Vista Wellness Center"]
     var spliffin = ["Vista Wellness Center", "The Laughing Leaf", "Delta 9"]
-    var sensichew = ["Tree House Collective", "Vista Wellness Center", "Tri City Emerald", "The Laughing Leaf", "Socal City Lites", "Breaking Buds"]
+    var sensichew = ["Tree House Collective", "Vista Wellness Center", "Tri City Emerald", "The Laughing Leaf", "SoCal City Lites", "Breaking Buds"]
     var jetty = ["Vista Wellness Center", "Delta 9", "Organic Solutions", "SoCal City Lites", "Breaking Buds"]
     var cheebachew = ["Golden State CBD", "BloomingScales", "Tree House Collective", "Vista Wellness Center", "Tri City Emerald", "The Laughing Leaf", "SoCal City Lites"]
     
@@ -62,8 +67,10 @@ class BrandViewController: UIViewController, UITableViewDataSource{
         return getTableRows()
     }
     
+    // http://stackoverflow.com/questions/26309205/populate-table-view-in-swift
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = getDispensaryName(indexPath: indexPath)
+        let cell = getDispensaryName(indexPath: indexPath)
         //cell = getDispensaryAddress(indexPath: indexPath)
         //var cell = UITableViewCell()
         //cell = getTableData()
@@ -92,28 +99,39 @@ class BrandViewController: UIViewController, UITableViewDataSource{
     }
     
     func getDispensaryName(indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        //let cell = UITableViewCell()
+        var cell = locationsTable.dequeueReusableCell(withIdentifier: "CELL")
+        if cell == nil {
+            cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "CELL")
+        }
+        cell?.textLabel?.numberOfLines = 0
         //let dispensaryName: String!
         switch(brandName){
         case "Presidential RX":
-            cell.textLabel?.text = presidential[indexPath.row]
+            cell?.textLabel?.text = presidential[indexPath.row]
+            cell?.detailTextLabel?.text = dispensaries[(cell?.textLabel?.text)!]
             //print(cell.textLabel?.text! ?? print("Could not get name"))
             //cell.detailTextLabel?.text = dispensaries[dispensaryName]
         case "Kurvana":
-            cell.textLabel?.text = kurvana[indexPath.row]
+            cell?.textLabel?.text = kurvana[indexPath.row]
+            cell?.detailTextLabel?.text = dispensaries[(cell?.textLabel?.text)!]
         case "Spliffin":
-            cell.textLabel?.text = spliffin[indexPath.row]
+            cell?.textLabel?.text = spliffin[indexPath.row]
+            cell?.detailTextLabel?.text = dispensaries[(cell?.textLabel?.text)!]
         case "Sensi Chew":
-            cell.textLabel?.text = sensichew[indexPath.row]
+            cell?.textLabel?.text = sensichew[indexPath.row]
+            cell?.detailTextLabel?.text = dispensaries[(cell?.textLabel?.text)!]
         case "Cheeba Chew":
-            cell.textLabel?.text = cheebachew[indexPath.row]
+            cell?.textLabel?.text = cheebachew[indexPath.row]
+            cell?.detailTextLabel?.text = dispensaries[(cell?.textLabel?.text)!]
         case "Jetty Extracts":
-            cell.textLabel?.text = jetty[indexPath.row]
+            cell?.textLabel?.text = jetty[indexPath.row]
+            cell?.detailTextLabel?.text = dispensaries[(cell?.textLabel?.text)!]
         default:
             break
         }
         //cell.textLabel?.text = presidential[indexPath.row]
-        return cell
+        return cell!
     }
     
     func getDispensaryAddress(indexPath: IndexPath) -> UITableViewCell {
