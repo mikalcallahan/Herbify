@@ -106,7 +106,8 @@ class CategoryViewController: UIViewController {
         button1Object.setTitle("Sensi Chew", for: .normal)
         button1Image.image = #imageLiteral(resourceName: "sensichewlogobw.png")
         button2Object.setTitle("Cheeba Chew", for: .normal)
-        button2Image.image = #imageLiteral(resourceName: "cheebachewlogo.png")
+        //button2Image.image = #imageLiteral(resourceName: "cheebachewlogo.png")
+        button2Image.image = #imageLiteral(resourceName: "cheebachewnew.png")
         button3Object.removeFromSuperview()
     }
     

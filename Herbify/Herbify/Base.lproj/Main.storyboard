@@ -193,48 +193,11 @@
                     <connections>
                         <outlet property="brandLabel" destination="1tC-gp-whg" id="QHP-ga-KzW"/>
                         <outlet property="locationsTable" destination="Irl-Nf-Cld" id="Veg-nn-PlU"/>
-                        <segue destination="gkl-jA-MOr" kind="show" identifier="brandToProduct" id="8LL-BD-axv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y0H-zB-loL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1970" y="1206"/>
-        </scene>
-        <!--Product View Controller-->
-        <scene sceneID="vbT-HL-Hft">
-            <objects>
-                <viewController storyboardIdentifier="productViewController" title="Product View Controller" id="gkl-jA-MOr" customClass="ProductViewController" customModule="Herbify" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="BLt-zr-VhA"/>
-                        <viewControllerLayoutGuide type="bottom" id="Kk7-zY-Cql"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2gB-sN-O5Y">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="850"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWe-VK-TZQ">
-                                <rect key="frame" x="0.0" y="156" width="375" height="38.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="KWe-VK-TZQ" secondAttribute="trailing" constant="-16" id="5GU-8s-qTo"/>
-                            <constraint firstItem="KWe-VK-TZQ" firstAttribute="top" secondItem="BLt-zr-VhA" secondAttribute="bottom" constant="92" id="Uzm-ek-6ky"/>
-                            <constraint firstItem="KWe-VK-TZQ" firstAttribute="leading" secondItem="2gB-sN-O5Y" secondAttribute="leadingMargin" constant="-16" id="pNY-qh-eDv"/>
-                            <constraint firstItem="KWe-VK-TZQ" firstAttribute="centerX" secondItem="2gB-sN-O5Y" secondAttribute="centerX" id="vb5-sn-Ckv"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Herbify" id="puo-gm-pKS"/>
-                    <connections>
-                        <outlet property="productLabel" destination="KWe-VK-TZQ" id="TbS-FP-fNH"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vtx-Pi-oNG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2846" y="919"/>
+            <point key="canvasLocation" x="3705" y="121"/>
         </scene>
         <!--Category View Controller-->
         <scene sceneID="jde-x2-t3n">
