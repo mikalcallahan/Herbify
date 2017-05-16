@@ -99,6 +99,7 @@ class CategoryViewController: UIViewController {
         button2Object.setTitle("Spliffin", for: .normal)
         button2Image.image = #imageLiteral(resourceName: "spliffin.png")
         button3Object.setTitle("Jetty Extracts", for: .normal)
+        button3Image.image = #imageLiteral(resourceName: "jetty_logo.jpg")
     }
     
     func edibles(){

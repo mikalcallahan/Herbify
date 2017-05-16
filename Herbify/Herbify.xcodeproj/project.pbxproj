@@ -19,6 +19,7 @@
 		957379321EB265E4001F924C /* HerbifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957379311EB265E4001F924C /* HerbifyTests.swift */; };
 		9573793D1EB265E4001F924C /* HerbifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9573793C1EB265E4001F924C /* HerbifyUITests.swift */; };
 		9588ECD51EC8F9CB00AD194A /* cheebachewlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9588ECD41EC8F9CB00AD194A /* cheebachewlogo.png */; };
+		95A4402F1ECA8E4800E218B6 /* jetty_logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 95A4402E1ECA8E4800E218B6 /* jetty_logo.jpg */; };
 		95A88FC41EB2787300367396 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 95A88FC31EB2787300367396 /* logo.png */; };
 		95A88FC61EB2787800367396 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95A88FC51EB2787800367396 /* logo@2x.png */; };
 		95A88FC81EB2787C00367396 /* logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95A88FC71EB2787C00367396 /* logo@3x.png */; };
@@ -66,6 +67,7 @@
 		9573793C1EB265E4001F924C /* HerbifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerbifyUITests.swift; sourceTree = "<group>"; };
 		9573793E1EB265E4001F924C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9588ECD41EC8F9CB00AD194A /* cheebachewlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cheebachewlogo.png; sourceTree = "<group>"; };
+		95A4402E1ECA8E4800E218B6 /* jetty_logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jetty_logo.jpg; sourceTree = "<group>"; };
 		95A88FC31EB2787300367396 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = Assets.xcassets/logo.png; sourceTree = "<group>"; };
 		95A88FC51EB2787800367396 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo@2x.png"; path = "Assets.xcassets/logo@2x.png"; sourceTree = "<group>"; };
 		95A88FC71EB2787C00367396 /* logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo@3x.png"; path = "Assets.xcassets/logo@3x.png"; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 		95A88FC91EB279E400367396 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				95A4402E1ECA8E4800E218B6 /* jetty_logo.jpg */,
 				9588ECD41EC8F9CB00AD194A /* cheebachewlogo.png */,
 				957006521EC82F680030B856 /* spliffin.png */,
 				95C3CC8A1EC7D35E0045E503 /* sensichewlogobw.png */,
@@ -286,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95A88FC61EB2787800367396 /* logo@2x.png in Resources */,
+				95A4402F1ECA8E4800E218B6 /* jetty_logo.jpg in Resources */,
 				95A88FC41EB2787300367396 /* logo.png in Resources */,
 				957379271EB265E4001F924C /* LaunchScreen.storyboard in Resources */,
 				95C3CC851EC7C48A0045E503 /* presidentiallogobw.png in Resources */,
